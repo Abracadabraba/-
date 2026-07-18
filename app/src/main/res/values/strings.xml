@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">大音</string>
+    <string name="hold_to_talk">按住说话</string>
+    <string name="listening">正在聆听…</string>
+    <string name="settings">设置</string>
+</resources>

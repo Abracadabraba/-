@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择方案"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/providerGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radioOnDevice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="本地识别+朗读 + 百度翻译（免信用卡，推荐）" />
+
+            <RadioButton
+                android:id="@+id/radioGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Google Cloud（需要信用卡）" />
+
+            <RadioButton
+                android:id="@+id/radioAzure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Microsoft Azure（需要信用卡）" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="百度翻译开放平台"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登录百度账号，申请【通用文本翻译API】，完成个人实名认证（不需要银行卡）解锁每月100万字符免费额度，在控制台能看到 APPID 和密钥。"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/baiduAppIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="百度翻译 APPID"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/baiduSecretKeyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="百度翻译 密钥"
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google Cloud API Key"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="需在 Google Cloud Console 启用 Speech-to-Text、Cloud Translation、Text-to-Speech 三项 API，创建一个 API Key（需要绑定信用卡开通结算）。"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/googleKeyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="AIza..."
+            android:inputType="textPassword"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Microsoft Azure"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="需创建一个 Speech 资源（识别+朗读）和一个 Translator 资源（翻译），分别填写各自的 Key 和 Region（需要绑定信用卡开通订阅）。"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/azureSpeechKeyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Speech 资源 Key"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/azureSpeechRegionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Speech 资源 Region（如 eastasia）"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/azureTranslatorKeyInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Translator 资源 Key"
+            android:inputType="textPassword"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/azureTranslatorRegionInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Translator 资源 Region（如 eastasia）"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存" />
+
+    </LinearLayout>
+</ScrollView>
